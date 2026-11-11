@@ -84,7 +84,23 @@ def handle_command(command, memory, path=MEMORY_FILE):
     # TODO 3: "/memory" returns every fact, one "key: value" per line (or a message if it's empty).
     #   "/forget <key>" deletes that key from memory, saves the file, and confirms it
     #   (or says the key wasn't found). Anything else returns "Commands: /memory, /forget <key>, quit".
-    raise NotImplementedError("TODO 3 in remember_me.py")
+    # /memory: show every saved fact, one "key: value" per line
+    if command == "/memory":
+        if not memory:
+            return "I don't remember anything about you yet."
+        return "\n".join(f"{key}: {value}" for key, value in memory.items())
+
+    # /forget <key>: delete one fact and save the file
+    if command.startswith("/forget "):
+        key = command.removeprefix("/forget ").strip()
+        if key in memory:
+            del memory[key]
+            save_memory(memory, path)
+            return f"Forgotten: {key}"
+        return f"I don't have anything saved under '{key}'."
+
+    # anything else: show the help line
+    return "Commands: /memory, /forget <key>, quit"
 
 
 # ---------- TODO 4: end the session ------------------------------------------------

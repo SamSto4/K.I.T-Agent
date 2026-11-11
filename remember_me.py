@@ -57,7 +57,25 @@ def handle_message(message, memory, history, path=MEMORY_FILE, collection=SESSIO
     #   2) recall_episodes(message, k=1, collection=collection); keep its text only if score >= MIN_SCORE.
     #   3) reply = chat_with_memory(message, memory, history, persona=PERSONA, past=<that text or "">).
     #   4) append the user message and the reply to history, then return the reply.
-    raise NotImplementedError("TODO 2 in remember_me.py")
+    # 1. Learn: pull facts out of Sam's message and save them
+    facts = extract_facts(message)
+    if facts:
+        memory.update(facts)
+        save_memory(memory, path)
+
+    # 2. Recall: find the most similar past session, keep it only if it's similar enough
+    past = ""
+    found = recall_episodes(message, k=1, collection=collection)
+    if found and found[0]["score"] >= MIN_SCORE:
+        past = found[0]["text"]
+
+    # 3. Answer: reply using the saved facts, the chat so far and the past session
+    reply = chat_with_memory(message, memory, history, persona=PERSONA, past=past)
+
+    # 4. Remember the chat: add both messages to the history
+    history.append({"role": "user", "content": message})
+    history.append({"role": "assistant", "content": reply})
+    return reply
 
 
 # ---------- TODO 3: privacy commands ----------------------------------------------

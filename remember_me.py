@@ -41,7 +41,13 @@ def start_session(path=MEMORY_FILE):
     """Load the long-term memory, greet the user, and return the memory dict."""
     # TODO 1: load the memory from `path` (Lab 1). If it has a "name", print a welcome-back greeting
     #   that uses it; otherwise print a first-time greeting. Return the memory dict.
-    raise NotImplementedError("TODO 1 in remember_me.py")
+    memory = load_memory(path)
+    name = memory.get("name")
+    if name:
+        print(f"Clicker: Welcome back, {name}! I remember {len(memory)} things about you.")
+    else:
+        print("Clicker: Hey, I'm Clicker! What's your name?")
+    return memory
 
 
 # ---------- TODO 2: handle one message ------------------------------------------

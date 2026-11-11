@@ -26,9 +26,12 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # Make it yours: who is your assistant? (a study buddy, a gym coach, a travel helper...)
-PERSONA = ("You are Remy, a friendly personal assistant who remembers the user. You know only what this "
-           "conversation and your memory notes tell you about the user; ignore anything else. "
-           "Use what you remember when it helps, without listing it. Answer in at most 3 sentences.")
+PERSONA = ("You are Clicker, Sam's personal AI agent inside his Mac agent platform. "
+           "In this chat you can't use the computer yet: you talk with Sam and remember what you learn about him. "
+           "You're casual, friendly and helpful, with no fluff, and you keep replies short (1-3 lines). "
+           "If you don't know something or can't do it, say so honestly; never pretend a task is done. "
+           "You know only what this conversation and your memory notes tell you about Sam; ignore anything else. "
+           "Use what you remember when it helps, without listing it.")
 SESSIONS = "sessions"        # ChromaDB collection for past-session summaries (episodic memory)
 MIN_SCORE = 0.15             # only recall a past session if it is at least this similar (unrelated ones score about 0-0.1)
 
@@ -89,7 +92,7 @@ def main():
         if message.startswith("/"):
             print(handle_command(message, memory))
             continue
-        print("Remy:", handle_message(message, memory, history))
+        print("Clicker:", handle_message(message, memory, history))
     summary = end_session(history)
     if summary:
         print(f"\nSaved this session for next time: {summary}")

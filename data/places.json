@@ -1,0 +1,305 @@
+{
+ "note": "FICTIONAL places in the fictional Lemon Street neighbourhood, used in the labs. Prices are per person in NIS.",
+ "places": [
+  {
+   "name": "Green Fig Kitchen",
+   "type": "restaurant",
+   "tags": [
+    "vegetarian",
+    "vegan options",
+    "cheap"
+   ],
+   "price_nis": 55,
+   "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri"
+   ],
+   "hours": "12:00-22:00",
+   "description": "Vegetarian bowls, shakshuka and lentil soups. Student discount."
+  },
+  {
+   "name": "Ember Grill",
+   "type": "restaurant",
+   "tags": [
+    "meat",
+    "steakhouse"
+   ],
+   "price_nis": 160,
+   "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "18:00-23:30",
+   "description": "Grilled steaks and kebabs. Not much for vegetarians."
+  },
+  {
+   "name": "Mama Lu Dumplings",
+   "type": "restaurant",
+   "tags": [
+    "vegetarian options",
+    "cheap",
+    "takeaway"
+   ],
+   "price_nis": 45,
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "11:00-21:00",
+   "description": "Hand-made dumplings, half the menu vegetarian."
+  },
+  {
+   "name": "Olive & Sage",
+   "type": "restaurant",
+   "tags": [
+    "vegetarian",
+    "fancy",
+    "date night"
+   ],
+   "price_nis": 140,
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "19:00-23:00",
+   "description": "Seasonal vegetarian tasting menu."
+  },
+  {
+   "name": "Harbour Fish House",
+   "type": "restaurant",
+   "tags": [
+    "fish",
+    "sea view"
+   ],
+   "price_nis": 120,
+   "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "12:00-23:00",
+   "description": "Fresh fish and seafood by the water."
+  },
+  {
+   "name": "Blue Note Cellar",
+   "type": "music venue",
+   "tags": [
+    "live jazz",
+    "indoor",
+    "bar"
+   ],
+   "price_nis": 60,
+   "days": [
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "21:00-01:00",
+   "description": "Small basement jazz club with live bands; ticket includes one drink."
+  },
+  {
+   "name": "Rooftop Sessions",
+   "type": "music venue",
+   "tags": [
+    "live music",
+    "outdoor",
+    "indie"
+   ],
+   "price_nis": 40,
+   "days": [
+    "Fri"
+   ],
+   "hours": "20:00-23:00",
+   "description": "Outdoor indie and acoustic gigs on a rooftop. Cancelled when it rains."
+  },
+  {
+   "name": "Static Club",
+   "type": "club",
+   "tags": [
+    "DJ",
+    "techno",
+    "late night"
+   ],
+   "price_nis": 80,
+   "days": [
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "23:30-05:00",
+   "description": "Techno club with guest DJs."
+  },
+  {
+   "name": "Park Cinema",
+   "type": "cinema",
+   "tags": [
+    "indoor",
+    "films",
+    "student price"
+   ],
+   "price_nis": 35,
+   "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "16:00-00:00",
+   "description": "Independent cinema, student tickets 35 NIS."
+  },
+  {
+   "name": "Open-Air Movie Night",
+   "type": "cinema",
+   "tags": [
+    "outdoor",
+    "free",
+    "films"
+   ],
+   "price_nis": 0,
+   "days": [
+    "Fri"
+   ],
+   "hours": "20:30-23:00",
+   "description": "Free classic film screening in Lemon Park. Cancelled when it rains."
+  },
+  {
+   "name": "Clay & Coffee",
+   "type": "workshop",
+   "tags": [
+    "indoor",
+    "creative",
+    "coffee"
+   ],
+   "price_nis": 90,
+   "days": [
+    "Mon",
+    "Wed",
+    "Fri"
+   ],
+   "hours": "18:00-21:00",
+   "description": "Pottery class with coffee; book a day ahead."
+  },
+  {
+   "name": "Night Market",
+   "type": "market",
+   "tags": [
+    "street food",
+    "vegetarian options",
+    "outdoor",
+    "cheap"
+   ],
+   "price_nis": 30,
+   "days": [
+    "Thu"
+   ],
+   "hours": "18:00-23:00",
+   "description": "Street-food stalls and local makers, many vegetarian stalls."
+  },
+  {
+   "name": "Board Game Lounge",
+   "type": "cafe",
+   "tags": [
+    "indoor",
+    "games",
+    "cheap",
+    "friends"
+   ],
+   "price_nis": 25,
+   "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "14:00-00:00",
+   "description": "Hundreds of board games, entry 25 NIS, vegetarian snacks."
+  },
+  {
+   "name": "Gelato Lab",
+   "type": "dessert",
+   "tags": [
+    "dessert",
+    "vegan options",
+    "cheap"
+   ],
+   "price_nis": 20,
+   "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "12:00-00:00",
+   "description": "Ice cream with vegan sorbets."
+  },
+  {
+   "name": "City Art Museum",
+   "type": "museum",
+   "tags": [
+    "indoor",
+    "art",
+    "student price"
+   ],
+   "price_nis": 30,
+   "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu"
+   ],
+   "hours": "10:00-20:00",
+   "description": "Modern art; late opening on Thursdays until 20:00."
+  },
+  {
+   "name": "Seaside Promenade",
+   "type": "walk",
+   "tags": [
+    "outdoor",
+    "free",
+    "sunset"
+   ],
+   "price_nis": 0,
+   "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hours": "always open",
+   "description": "A free sunset walk along the beach."
+  }
+ ]
+}

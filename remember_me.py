@@ -115,7 +115,17 @@ def end_session(history, collection=SESSIONS):
     # TODO 4: join the history into a transcript ("user: ...", one line per message), ask Claude
     #   for a summary with system=SUMMARY_SYSTEM, save it with save_episode(summary, collection=collection)
     #   and return the summary.
-    raise NotImplementedError("TODO 4 in remember_me.py")
+    # 1. Turn the chat history into a transcript, one "role: content" line per message
+    transcript = "\n".join(f"{msg['role']}: {msg['content']}" for msg in history)
+
+    # 2. Ask Claude for a short summary of the whole conversation
+    summary = ask_claude(transcript, system=SUMMARY_SYSTEM)
+
+    # 3. Save the summary in ChromaDB so a later session can recall it
+    save_episode(summary, collection=collection)
+
+    # 4. Give the summary back
+    return summary
 
 
 # ---------- Given: the chat loop ------------------------------------------------------
